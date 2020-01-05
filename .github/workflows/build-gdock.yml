@@ -53,7 +53,7 @@ jobs:
         git clone https://github.com/coolsnowwolf/lede lede
 
     - name: Add Feeds Config
-      run: echo src-git lienol https://github.com/Lienol/openwrt-package >> ./feeds.conf.default
+      run: cd lede && echo src-git lienol https://github.com/Lienol/openwrt-package >> ./feeds.conf.default
 
     - name: Update feeds
       run: cd lede && ./scripts/feeds update -a

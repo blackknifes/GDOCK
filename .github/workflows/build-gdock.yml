@@ -54,6 +54,8 @@ jobs:
 
     - name: Add Feeds Config
       run: cd lede && echo src-git lienol https://github.com/Lienol/openwrt-package >> ./feeds.conf.default
+        git clone https://github.com/KFERMercer/openwrt-baidupcs-web.git ./package/baidupcs-webgit
+        git clone https://github.com/KFERMercer/luci-app-baidupcs-web.git ./package/luci-app-baidupcs-web
 
     - name: Update feeds
       run: cd lede && ./scripts/feeds update -a
